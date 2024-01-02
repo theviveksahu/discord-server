@@ -1,3 +1,4 @@
+"use client";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 import { redirectToSignIn } from "@clerk/nextjs";
@@ -50,6 +51,7 @@ const InviteCodePage = async ({ params }: InviteCodePageProps) => {
     },
   });
 
+  console.log("SERVER FOUND-", server);
   if (server) {
     return redirect(`/servers/${server.id}`);
   }
