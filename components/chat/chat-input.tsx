@@ -29,6 +29,7 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
     },
   });
 
+  //TODO - check why disbled is not working
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
